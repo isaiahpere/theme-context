@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useDebounce = (value, delay, callBack = () => {}) => {
   const [debounceValue, setDebounceValue] = useState(value);
@@ -10,7 +10,7 @@ const useDebounce = (value, delay, callBack = () => {}) => {
     }, delay);
 
     return () => clearTimeout(handler);
-  }, [value, delay]);
+  }, [value, delay, callBack]);
 
   return debounceValue;
 };

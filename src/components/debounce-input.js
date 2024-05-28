@@ -9,6 +9,7 @@ const DebouncedINput = () => {
   };
 
   const debouncedValue = useDebounce(inputText, 1000, () => {
+    // API call once the debounce value is done
     console.log("function called");
   });
 
