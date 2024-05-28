@@ -8,7 +8,9 @@ const DebouncedINput = () => {
     setInputText(e.target.value);
   };
 
-  const debouncedValue = useDebounce(inputText, 1000);
+  const debouncedValue = useDebounce(inputText, 1000, () => {
+    console.log("function called");
+  });
 
   return (
     <div>
